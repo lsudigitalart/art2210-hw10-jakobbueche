@@ -1,5 +1,5 @@
-let particles = [];
-let grass = []
+let grass = [];
+//let grass = []
 let colors = []
 
 function preload() {
@@ -43,12 +43,12 @@ function draw() {
 
  let pColor = colors[int(random(colors.length))]
 
-    particles.push(new Particle(290, 300,pColor))
+    grass.push(new GrassBlade(290, 300,pColor))
     //particles.push(new Particle(mouseX, mouseY,pColor))
   //}
 
-  for(let i = 0; i < particles.length; i++)
-    particles[i].display()  
+  for(let i = 0; i < grass.length; i++)
+    grass[i].display()  
 
   //if(particles[0])particles[0].display()
 
@@ -70,7 +70,7 @@ function draw() {
 
 }
 
-class Particle {
+class GrassBlade {
   constructor(x, y, c) {
     this.x = x
     this.y = y
